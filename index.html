@@ -1,4 +1,9 @@
-<?xml version="1.0"?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>anim svg ligne</title>
+</head>
+<body>
 <svg width="120" height="120"  viewBox="0 0 120 120"
      xmlns="http://www.w3.org/2000/svg" version="1.1"
      xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -45,7 +50,7 @@
            repeatCount="indefinite">
     <mpath xlink:href="#motionPath" />
   </animateMotion>
-  <animateMotion 
+  <!--<animateMotion 
            xlink:href="#circle2"
            dur="5s"
            begin="2s"
@@ -68,5 +73,28 @@
            fill="freeze"
            repeatCount="indefinite">
     <mpath xlink:href="#motionPath" />
-  </animateMotion>
+  </animateMotion>-->
 </svg>
+<button onclick="play()">play</button>
+<button onclick="pausePlayAll()">pause</button>
+<script>
+    var now = new Date();
+    var millisTill10 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 22, 0, 10, 0) - now;
+    if (millisTill10 < 0) {
+         millisTill10 += 86400000; // it's after 10am, try 10am tomorrow.
+    }
+    setTimeout(function(){alert("It's 10am!")}, millisTill10);
+
+    function play() {
+        document.querySelector('animateMotion').beginElement();
+    }
+
+    function pausePlayAll() {
+        var root = document.querySelector('svg');
+        root.animationsPaused() 
+            ? root.unpauseAnimations() 
+            : root.pauseAnimations();
+    }
+</script>
+</body>
+</html>
