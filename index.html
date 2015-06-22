@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<svg width="120" height="120"  viewBox="0 0 120 120"
+     xmlns="http://www.w3.org/2000/svg" version="1.1"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <rect x="0" y="35" height="15" width="15">
+        <animate begin="0s"
+                 attributeType="XML"
+                 attributeName="x"
+                 from="0"
+                 to="100"
+                 dur="1min"
+                 fill="freeze" />
+    </rect>
+    
+    <text x="10" y="20" text-anchor="middle">0s</text>
+    <line x1="10" y1="25" x2="10" y2="55" stroke="grey" stroke-width=".5" />
+    <text x="35" y="20" text-anchor="middle">2s</text>
+    <line x1="35" y1="25" x2="35" y2="55" stroke="grey" stroke-width=".5" />
+    <text x="60" y="20" text-anchor="middle">4s</text>
+    <line x1="60" y1="25" x2="60" y2="55" stroke="grey" stroke-width=".5" />
+    <text x="85" y="20" text-anchor="middle">6s</text>
+    <line x1="85" y1="25" x2="85" y2="55" stroke="grey" stroke-width=".5" />
+    <text x="110" y="20" text-anchor="middle">8s</text>
+    <line x1="110" y1="25" x2="110" y2="55" stroke="grey" stroke-width=".5" />
+    
+    <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
+    <line x1="10" y1="55" x2="110" y2="55" stroke="grey" stroke-width=".5" />
+</svg>
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="400px" height="300px" viewBox="0 0 400 300" enable-background="new 0 0 400 300" xml:space="preserve">
+<path id="motionPath" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M49.773,30.721h74.23c4.4,0,4.788,1.626,0.862,3.613
+	L82.695,55.68c-3.926,1.987-4.952,6.474-2.281,9.97l13.979,18.297c2.671,3.496,8.444,6.049,12.828,5.674l32.839-2.815
+	c4.384-0.375,8.924-4.154,10.09-8.397l6.592-23.993"/>
+	<circle id="circle" r="10" cx="0" cy="0" fill="tomato" />
+	<circle id="circle2" r="10" cx="0" cy="0" fill="tomato" />
+	<circle id="circle3" r="10" cx="0" cy="0" fill="tomato" />
+	<circle id="circle4" r="10" cx="0" cy="0" fill="tomato" />
+  <animateMotion 
+           xlink:href="#circle"
+           dur="5s"
+           begin="0s"
+           fill="freeze"
+           repeatCount="indefinite">
+    <mpath xlink:href="#motionPath" />
+  </animateMotion>
+  <animateMotion 
+           xlink:href="#circle2"
+           dur="5s"
+           begin="2s"
+           fill="freeze"
+           repeatCount="indefinite">
+    <mpath xlink:href="#motionPath" />
+  </animateMotion>
+  <animateMotion 
+           xlink:href="#circle3"
+           dur="5s"
+           begin="3s"
+           fill="freeze"
+           repeatCount="indefinite">
+    <mpath xlink:href="#motionPath" />
+  </animateMotion>
+  <animateMotion 
+           xlink:href="#circle4"
+           dur="5s"
+           begin="4s"
+           fill="freeze"
+           repeatCount="indefinite">
+    <mpath xlink:href="#motionPath" />
+  </animateMotion>
+</svg>
