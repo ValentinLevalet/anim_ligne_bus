@@ -2,9 +2,14 @@
 <html>
 <head>
     <title>anim svg ligne</title>
+    <meta charset="UTF-8">
+    <style>
+        body {margin: 0;}
+        svg text, svg text tspan {font-family: sans-serif;}
+    </style>
 </head>
 <body>
-<svg width="120" height="120"  viewBox="0 0 120 120"
+<!-- <svg width="120" height="120"  viewBox="0 0 120 120"
      xmlns="http://www.w3.org/2000/svg" version="1.1"
      xmlns:xlink="http://www.w3.org/1999/xlink">
 
@@ -31,26 +36,30 @@
     
     <line x1="10" y1="30" x2="110" y2="30" stroke="grey" stroke-width=".5" />
     <line x1="10" y1="55" x2="110" y2="55" stroke="grey" stroke-width=".5" />
-</svg>
+</svg> -->
 
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="400px" height="300px" viewBox="0 0 400 300" enable-background="new 0 0 400 300" xml:space="preserve">
+<!--<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="400px" height="300px" viewBox="0 0 400 300" enable-background="new 0 0 400 300" xml:space="preserve">
 <path id="motionPath" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M49.773,30.721h74.23c4.4,0,4.788,1.626,0.862,3.613
-	L82.695,55.68c-3.926,1.987-4.952,6.474-2.281,9.97l13.979,18.297c2.671,3.496,8.444,6.049,12.828,5.674l32.839-2.815
-	c4.384-0.375,8.924-4.154,10.09-8.397l6.592-23.993"/>
-	<circle id="circle" r="10" cx="0" cy="0" fill="tomato" />
-	<circle id="circle2" r="10" cx="0" cy="0" fill="tomato" />
-	<circle id="circle3" r="10" cx="0" cy="0" fill="tomato" />
-	<circle id="circle4" r="10" cx="0" cy="0" fill="tomato" />
+    L82.695,55.68c-3.926,1.987-4.952,6.474-2.281,9.97l13.979,18.297c2.671,3.496,8.444,6.049,12.828,5.674l32.839-2.815
+    c4.384-0.375,8.924-4.154,10.09-8.397l6.592-23.993"/>
+    <circle id="circle" r="10" cx="0" cy="0" fill="tomato" />
+    <circle id="circle2" r="10" cx="0" cy="0" fill="tomato" />
+    <circle id="circle3" r="10" cx="0" cy="0" fill="tomato" />
+    <circle id="circle4" r="10" cx="0" cy="0" fill="tomato" />
   <animateMotion 
            xlink:href="#circle"
            dur="5s"
-           begin="0s"
+           begin="indefinite"
            fill="freeze"
-           repeatCount="indefinite">
+           keyTimes="0;0.2;1"
+           keyPoints="0;0.9;1"
+           calcmode="linear"
+           repeatCount="1">
     <mpath xlink:href="#motionPath" />
   </animateMotion>
-  <!--<animateMotion 
+
+  <animateMotion 
            xlink:href="#circle2"
            dur="5s"
            begin="2s"
@@ -73,17 +82,12 @@
            fill="freeze"
            repeatCount="indefinite">
     <mpath xlink:href="#motionPath" />
-  </animateMotion>-->
-</svg>
-<button onclick="play()">play</button>
-<button onclick="pausePlayAll()">pause</button>
+  </animateMotion>
+</svg>-->
+
+<!-- <button onclick="play()">play</button>
+<button onclick="pausePlayAll()">pause</button> -->
 <script>
-    var now = new Date();
-    var millisTill10 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 22, 0, 10, 0) - now;
-    if (millisTill10 < 0) {
-         millisTill10 += 86400000; // it's after 10am, try 10am tomorrow.
-    }
-    setTimeout(function(){alert("It's 10am!")}, millisTill10);
 
     function play() {
         document.querySelector('animateMotion').beginElement();
@@ -95,6 +99,144 @@
             ? root.unpauseAnimations() 
             : root.pauseAnimations();
     }
+
+    var now = new Date();
+    var millisTill10 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 21, 0, 0, 0) - now;
+    console.log(millisTill10);
+    if (millisTill10 < 0) {
+         millisTill10 += 86400000; // it's after 10am, try 10am tomorrow.
+    }
+    setTimeout(function(){console.log("It's 10am!"); play();}, millisTill10);
+
 </script>
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="320px" height="505px" viewBox="0 0 320 505" enable-background="new 0 0 320 505" xml:space="preserve">
+<rect y="-0.004" fill="#808285" width="320" height="533.333"/>
+<g>
+    <rect x="28" y="6.829" fill="none" width="122.5" height="502.667"/>
+    <text transform="matrix(1 0 0 1 28 15.3486)"><tspan x="0" y="0" font-family="'MyriadPro-Regular'" font-size="12">Pont de Sèvres</tspan><tspan x="0" y="22.5" font-family="'MyriadPro-Regular'" font-size="12">Parc de Saint-Cloud</tspan><tspan x="0" y="45" font-family="'MyriadPro-Regular'" font-size="12">Division Leclerc</tspan><tspan x="0" y="67.5" font-family="'MyriadPro-Regular'" font-size="12">Gare de Bellevue</tspan><tspan x="0" y="90" font-family="'MyriadPro-Regular'" font-size="12">Stalingrad</tspan><tspan x="0" y="112.5" font-family="'MyriadPro-Regular'" font-size="12">Église de Meudon</tspan><tspan x="0" y="135" font-family="'MyriadPro-Regular'" font-size="12">Val Fleury RER</tspan><tspan x="0" y="157.5" font-family="'MyriadPro-Regular'" font-size="12">Paul Bert</tspan><tspan x="0" y="180" font-family="'MyriadPro-Regular'" font-size="12">Rue des Peupliers</tspan><tspan x="0" y="202.5" font-family="'MyriadPro-Regular'" font-size="12">Fleury</tspan><tspan x="0" y="225" font-family="'MyriadPro-Regular'" font-size="12">Épinettes</tspan><tspan x="0" y="247.5" font-family="'MyriadPro-Regular'" font-size="12">Défense–Égalité</tspan><tspan x="0" y="270" font-family="'MyriadPro-Regular'" font-size="12">Gare de Clamart</tspan><tspan x="0" y="292.5" font-family="'MyriadPro-Regular'" font-size="12">Musée</tspan><tspan x="0" y="315" font-family="'MyriadPro-Regular'" font-size="12">Musée</tspan><tspan x="0" y="337.5" font-family="'MyriadPro-Regular'" font-size="12">Victor Hugo</tspan><tspan x="0" y="360" font-family="'MyriadPro-Regular'" font-size="12">Frères Voisin</tspan><tspan x="0" y="382.5" font-family="'MyriadPro-Regular'" font-size="12">Séverine</tspan><tspan x="0" y="405" font-family="'MyriadPro-Regular'" font-size="12">Porte d’Issy</tspan><tspan x="0" y="427.5" font-family="'MyriadPro-Regular'" font-size="12">Balard</tspan><tspan x="0" y="450" font-family="'MyriadPro-Regular'" font-size="12">Leblanc–Delbarre</tspan><tspan x="0" y="472.5" font-family="'MyriadPro-Regular'" font-size="12">Hôpital Européen </tspan><tspan x="0" y="483.75" font-family="'MyriadPro-Regular'" font-size="12">Georges Pompidou</tspan></text>
+    <rect x="183.5" y="14.496" fill="none" width="108.5" height="478"/>
+    <text transform="matrix(1 0 0 1 208.709 34.2656)"><tspan x="0" y="0" font-family="'MyriadPro-Regular'" font-size="12">Musée de Sèvres</tspan><tspan x="26.651" y="22.5" font-family="'MyriadPro-Regular'" font-size="12">Brimborion</tspan><tspan x="15.396" y="45" font-family="'MyriadPro-Regular'" font-size="12">11 Novembre</tspan><tspan x="19.284" y="67.5" font-family="'MyriadPro-Regular'" font-size="12">Jeanne d’Arc</tspan><tspan x="42.036" y="90" font-family="'MyriadPro-Regular'" font-size="12">Rabelais</tspan><tspan x="23.651" y="112.5" font-family="'MyriadPro-Regular'" font-size="12">Victor Hugo</tspan><tspan x="14.496" y="135" font-family="'MyriadPro-Regular'" font-size="12">André Schock</tspan><tspan x="29.544" y="157.5" font-family="'MyriadPro-Regular'" font-size="12">Orphelinat</tspan><tspan x="56.027" y="180" font-family="'MyriadPro-Regular'" font-size="12">Rivoli</tspan><tspan x="16.764" y="202.5" font-family="'MyriadPro-Regular'" font-size="12">Hôpital Percy</tspan><tspan x="29.844" y="225" font-family="'MyriadPro-Regular'" font-size="12">É. Duployé</tspan><tspan x="57.083" y="247.5" font-family="'MyriadPro-Regular'" font-size="12">Verdi</tspan><tspan x="-5.376" y="270" font-family="'MyriadPro-Regular'" font-size="12">Général de Gaulle</tspan><tspan x="25.416" y="292.5" font-family="'MyriadPro-Regular'" font-size="12">Rue du Fort</tspan><tspan x="22.488" y="315" font-family="'MyriadPro-Regular'" font-size="12">Mairie d’Issy</tspan><tspan x="-9.756" y="337.5" font-family="'MyriadPro-Regular'" font-size="12">Maison de Retraite</tspan><tspan x="-11.039" y="360" font-family="'MyriadPro-Regular'" font-size="12">Colonel Pierre Avia</tspan><tspan x="13.836" y="382.5" font-family="'MyriadPro-Regular'" font-size="12">Louis Armand</tspan><tspan x="-2.58" y="405" font-family="'MyriadPro-Regular'" font-size="12">Suzanne Lenglen</tspan><tspan x="22.764" y="427.5" font-family="'MyriadPro-Regular'" font-size="12">Place Balard</tspan><tspan x="22.512" y="450" font-family="'MyriadPro-Regular'" font-size="12">Rue Leblanc</tspan></text>
+    <g>
+        <polyline fill="none" stroke="#79C797" stroke-width="5" stroke-linejoin="round" points="159.036,338.313 150.899,342.791 
+            156.138,349.636 172.639,371.488 155.406,430.705 155.349,436.703         "/>
+        <polyline fill="none" stroke="#79C797" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="
+            142.999,314.618 152.741,315.846 161.168,324.411         "/>
+        <polyline fill="none" stroke="#79C797" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="
+            161.078,324.536 159.148,335.592 166.258,349.288 143.749,426.255 159.449,439.945 159.236,463.386 150.547,469.001 
+            150.455,478.574 158.167,486.082 158.167,497.575         "/>
+        <polyline fill="none" stroke="#79C797" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="
+            136.854,281.879 144.842,286.181 143.086,314.618         "/>
+        
+            <line fill="none" stroke="#79C797" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" x1="136.592" y1="293.464" x2="144.355" y2="293.64"/>
+        
+            <line fill="none" stroke="#79C797" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" x1="146.084" y1="207.013" x2="145.997" y2="179.889"/>
+        <polyline fill="none" stroke="#79C797" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="
+            176.352,277.754 153.619,267.287 153.619,253.093         "/>
+        <polyline fill="none" stroke="#79C797" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="
+            176.465,277.667 176.188,233.284 155.212,222.373 146.084,207.013 145.997,179.889 181.455,179.633 152.491,128.987 
+            157.581,123.721 152.053,118.717 151.35,106.341 158.723,84.375 158.46,27.392 175.418,6.416       "/>
+        
+            <line fill="none" stroke="#79C797" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" x1="153.205" y1="252.477" x2="138.211" y2="262.408"/>
+        <polyline fill="none" stroke="#79C797" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="
+            137.732,262.659 136.241,288.99 136.504,293.375      "/>
+        
+            <line fill="none" stroke="#79C797" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" x1="153.644" y1="265.642" x2="137.532" y2="274.291"/>
+        <polyline fill="#FFFFFF" points="157.397,449.191 157.399,447.203 161.381,447.21 161.379,449.198 157.397,449.191         "/>
+        <polyline fill="#FFFFFF" points="173.471,375.745 172.949,377.666 169.107,376.617 169.629,374.699 173.471,375.745        "/>
+        <polyline fill="#FFFFFF" points="160.776,352.43 161.934,354.048 158.696,356.361 157.537,354.747 160.776,352.43      "/>
+        <polyline fill="#FFFFFF" points="169.93,387.81 169.389,389.723 165.561,388.639 166.1,386.725 169.93,387.81      "/>
+        <polyline fill="#FFFFFF" points="161.168,417.87 160.645,419.792 156.805,418.743 157.326,416.824 161.168,417.87      "/>
+        <polyline fill="#FFFFFF" points="172.25,233.424 170.461,232.557 172.199,228.977 173.99,229.844 172.25,233.424       "/>
+        <polyline fill="#FFFFFF" points="178.309,177.998 177.314,176.274 180.764,174.288 181.76,176.011 178.309,177.998         "/>
+        <polyline fill="#FFFFFF" points="164.406,153.846 163.412,152.123 166.861,150.136 167.855,151.858 164.406,153.846        "/>
+        <polyline fill="#FFFFFF" points="151.68,259.259 151.696,257.27 155.676,257.302 155.663,259.292 151.68,259.259       "/>
+        <polyline fill="#FFFFFF" points="166.412,270.953 168.195,271.833 166.43,275.403 164.645,274.522 166.412,270.953         "/>
+        <polyline fill="#FFFFFF" points="154.293,344.031 155.554,345.592 152.445,348.076 151.182,346.515 154.293,344.031        "/>
+        <polyline fill="#FFFFFF" points="163.625,339.363 164.531,341.149 160.969,342.929 160.062,341.139 163.625,339.363        "/>
+        <polyline fill="#FFFFFF" points="156.62,316.913 158.012,318.362 155.129,321.101 153.735,319.657 156.62,316.913      "/>
+        <polyline fill="#FFFFFF" points="157.512,333.258 157.872,331.285 161.783,332.019 161.424,333.994 157.512,333.258        "/>
+        <polyline fill="#FFFFFF" points="158.074,329.572 158.408,327.594 162.328,328.275 161.996,330.257 158.074,329.572        "/>
+        <polyline fill="#FFFFFF" points="156.365,439.934 154.901,438.584 157.598,435.657 159.062,437.005 156.365,439.934        "/>
+        <polyline fill="#FFFFFF" points="144.901,415.313 145.435,413.395 149.268,414.464 148.734,416.382 144.901,415.313        "/>
+        <polyline fill="#FFFFFF" points="149.28,400.372 149.835,398.462 153.657,399.574 153.103,401.485 149.28,400.372      "/>
+        <polyline fill="#FFFFFF" points="157.322,460.508 157.324,458.518 161.305,458.522 161.305,460.512 157.322,460.508        "/>
+        <polyline fill="#FFFFFF" points="156.383,487.198 154.984,485.786 157.816,482.988 159.216,484.4 156.383,487.198      "/>
+        <polyline fill="#FFFFFF" points="152.537,470.672 152.481,472.657 148.503,472.548 148.557,470.559 152.537,470.672        "/>
+        <polyline fill="#FFFFFF" points="159.527,365.245 160.044,363.323 163.887,364.358 163.371,366.279 159.527,365.245        "/>
+        <polyline fill="#FFFFFF" points="154.118,177.812 156.108,177.813 156.103,181.793 154.114,181.793 154.118,177.812        "/>
+        <polyline fill="#FFFFFF" points="148.066,198.302 148.064,200.291 144.084,200.286 144.084,198.297 148.066,198.302        "/>
+        <polyline fill="#FFFFFF" points="150.242,210.046 151.274,211.747 147.869,213.81 146.836,212.109 150.242,210.046         "/>
+        <polyline fill="#FFFFFF" points="155.265,218.484 156.277,220.196 152.852,222.223 151.837,220.512 155.265,218.484        "/>
+        <polyline fill="#FFFFFF" points="153.94,115.763 154.059,117.748 150.085,117.986 149.964,116 153.94,115.763      "/>
+        <polyline fill="#FFFFFF" points="154.674,118.372 156.228,119.614 153.742,122.723 152.187,121.481 154.674,118.372        "/>
+        <polyline fill="#FFFFFF" points="153.187,125.393 154.483,123.884 157.5,126.479 156.206,127.988 153.187,125.393      "/>
+        <polyline fill="#FFFFFF" points="153.637,135.114 152.716,133.351 156.246,131.511 157.168,133.273 153.637,135.114        "/>
+        <polyline fill="#FFFFFF" points="149.997,104.069 150.66,102.194 154.413,103.523 153.75,105.399 149.997,104.069      "/>
+        <polyline fill="#FFFFFF" points="154.017,92.093 154.713,90.23 158.441,91.627 157.744,93.49 154.017,92.093       "/>
+        <polyline fill="#FFFFFF" points="156.777,81.657 156.778,79.668 160.759,79.673 160.758,81.662 156.777,81.657         "/>
+        <polyline fill="#FFFFFF" points="156.688,69.886 156.689,67.897 160.67,67.901 160.669,69.891 156.688,69.886      "/>
+        <polyline fill="#FFFFFF" points="156.635,57.063 156.636,55.074 160.617,55.078 160.617,57.068 156.635,57.063         "/>
+        <polyline fill="#FFFFFF" points="156.594,46.159 156.596,44.17 160.576,44.175 160.576,46.164 156.594,46.159      "/>
+        <polyline fill="#FFFFFF" points="156.542,39.84 156.544,37.851 160.525,37.855 160.525,39.845 156.542,39.84       "/>
+        <polyline fill="#FFFFFF" points="156.5,33.443 156.503,31.455 160.483,31.459 160.482,33.449 156.5,33.443         "/>
+        <polyline fill="#FFFFFF" points="164.486,23.194 163.199,24.709 160.166,22.132 161.453,20.615 164.486,23.194         "/>
+        <polyline fill="#FFFFFF" points="145.34,312.971 147.315,313.208 146.837,317.161 144.862,316.923 145.34,312.971      "/>
+        <polyline fill="#FFFFFF" points="174.307,247.729 174.309,245.741 178.289,245.745 178.289,247.734 174.307,247.729        "/>
+        <polyline fill="#FFFFFF" points="162.9,353.719 163.416,351.797 167.26,352.833 166.746,354.754 162.9,353.719         "/>
+        <polyline fill="#FFFFFF" points="178.455,269.188 178.479,271.177 174.498,271.224 174.475,269.234 178.455,269.188        "/>
+        <polyline fill="#FFFFFF" points="140.787,295.506 138.797,295.524 138.76,291.546 140.749,291.525 140.787,295.506         "/>
+        <polyline fill="#FFFFFF" points="141.312,286.386 139.54,285.483 141.35,281.938 143.123,282.84 141.312,286.386       "/>
+        <polyline fill="#FFFFFF" points="155.238,265.856 157.038,266.701 155.345,270.304 153.544,269.459 155.238,265.856        "/>
+        <polyline fill="#FFFFFF" points="158.786,226.475 157.043,225.518 158.959,222.029 160.704,222.985 158.786,226.475        "/>
+        <rect x="173.418" y="1.996" fill="#231F20" stroke="#FFFFFF" stroke-miterlimit="10" width="5.775" height="5.775"/>
+        <rect x="155.491" y="496.22" fill="#231F20" stroke="#FFFFFF" stroke-miterlimit="10" width="5.775" height="5.775"/>
+    </g>
+</g>
+<g id="Layer_2" opacity="0">
+    
+        <path id="trajectoire" fill="none" stroke="#ED2224" stroke-width="9.862" stroke-linecap="round" stroke-linejoin="round" d="M175.547,6.996 158.601,27.956 158.864,84.897 151.483,107.375 152.758,119.388 157.549,124.017 152.976,129.733 181.041,179.833 146.324,180.353 146.532,206.857 155.471,222.968 176.26,233.674 176.154,277.746 152.456,267.04 137.489,274.107 136.761,294.064 144.869,293.857 143.413,314.436 152.768,315.996 160.979,324.726 159.108,335.536 165.864,349.361 144.349,426.486 159.109,440.206 159.004,464.007 150.689,469.725 151.105,478.975 158.693,485.939 157.861,497.996"/>
+</g>
+
+<g transform="translate(-50,-50)" id="radar">
+    <circle cx="50" cy="50" r="2" fill="#0ff"></circle>
+    <circle cx="50" cy="50" r="45" fill="none" stroke="#0ff" stroke-width="5" stroke-opacity="1">
+      <animate attributeName="r" from="0" to="45" repeatCount="indefinite" dur="2s"></animate>
+      <animate attributeName="stroke-opacity" from="1" to="0" repeatCount="indefinite" dur="2s"></animate>
+    </circle>
+    <circle cx="50" cy="50" r="45" fill="none" stroke="#0ff" stroke-width="5" stroke-opacity="1">
+      <animate attributeName="r" from="0" to="45" repeatCount="indefinite" dur="1s"></animate>
+      <animate attributeName="stroke-opacity" from="1" to="0" repeatCount="indefinite" dur="1s"></animate>
+    </circle>
+</g>
+
+<!-- <animateMotion 
+       xlink:href="#radar"
+       dur="20s"
+       begin="0s"
+       fill="freeze"
+       keyTimes="0;0.4;1"
+       keyPoints="0;0.5;1"
+       calcmode="linear"
+       repeatCount="indefinite"
+       rotate="auto">
+    <mpath xlink:href="#trajectoire" />
+</animateMotion> -->
+
+<animateMotion 
+       xlink:href="#radar"
+       dur="2220s"
+       begin="0s"
+       fill="freeze"
+       keyTimes="0;0.2;0.4;0.6;0.8;1"
+       keyPoints="0;0.08;0.19;0.42;0.72;1"
+       calcmode="linear"
+       repeatCount="1"
+       rotate="auto">
+    <mpath xlink:href="#trajectoire" />
+</animateMotion>
+</svg>
+
 </body>
 </html>
